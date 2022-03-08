@@ -7,6 +7,7 @@ let n2 = 3
 console.log(`tinh tong ${n1} + ${n2} = `, tinhTong(n1, n2));
 
 // tinh hieu
+
 const tinhHieu = (x, y) => {
     return x - y
 }
