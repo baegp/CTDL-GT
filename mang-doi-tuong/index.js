@@ -44,5 +44,30 @@ let iphone12 = {
 // 2. Định nghĩa một mảng và thêm vào toàn bộ các đối tượng trên vào mảng 
 let arr = []
 
-arr.push(iphone5,iphone6,iphone7,iphone8,iphoneX,iphone11,iphone12)
+arr.push(iphone5, iphone6, iphone7, iphone8, iphoneX, iphone11, iphone12)
 console.log(arr);
+
+// 3. Sửa giá sản phẩm nằm ở vị trí thứ 3 trong mảng thành 5000000
+arr[2].price = 5000000
+console.log(arr[2]);
+
+// 4. Xoá sản phẩm ở vị trí thứ (5,6) và (1,2)
+let splice56 = arr.splice(5, 6)
+let splice12 = arr.splice(1, 2)
+
+console.log(`splice 5 6`, splice56);
+console.log(`splice 1 2`, splice12);
+
+// 5. Viết hàm truyền vào một mảng các đối tượng xuất ra thông tin sản phẩm trên giao diện (sử dụng hàm document.write) với cú pháp
+// document.write(`san pham ${arr.ten} co gia la: ${arr.price}`)
+const xuatThongTin = (mang) => {
+    mang.map((item) => (
+        document.writeln(`san pham ${item.ten} co gia la: ${item.price}`)
+    ))
+}
+xuatThongTin(arr)
+
+// 6. Viết hàm truyền vào một mảng các đối tượng xuất ra giao diện sản phẩm. Trên giao diện phải hiển thị được hinhAnh, ten, gia 
+const xuatGiaoDien =(mang) =>{
+    
+}
