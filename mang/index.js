@@ -105,3 +105,46 @@ const find = (arr, chuoiCanTim) => {
 // - string cần tìm: bóng rổ
 // - kết quả trả ra: vị trí [2,4]
 console.log('tim tat ca:', find(["bóng chuyền", "bóng rổ", "bóng đá", "bóng rổ"], 'bóng rổ'))
+
+// 20. Viết hàm thêm một phần tử vào mảng 
+const add = (arr, chuoiCanThem) => {
+    arr.push(chuoiCanThem)
+    return arr
+}
+
+// 21. Sử dụng hàm (20). 
+// - Mảng: ["bóng chuyền", "bóng rổ", "bóng đá"]    
+// - string cần thêm: bóng rổ
+// - kết quả trả ra: ["bóng chuyền", "bóng rổ", "bóng đá", "bóng rổ"]
+console.log('them phan tu:', add(["bóng chuyền", "bóng rổ", "bóng đá"], 'bóng rổ'));
+
+// 22. Viết hàm thêm một phần tử vào mảng, nhưng nếu phần tử đó đã tồn tại thì ko thêm nữa.
+const addIfNotExist = (arr, chuoiCanThem) => {
+    let count = 0
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == chuoiCanThem) {
+            count++
+        }
+    }
+    if (count == 0) {
+        arr.push(chuoiCanThem)
+    }
+    return arr
+}
+
+// 23. Sử dụng hàm (22). 
+// - Mảng: ["bóng chuyền", "bóng rổ", "bóng đá"]    
+// - string cần thêm: bóng rổ
+// - kết quả trả ra: ["bóng chuyền", "bóng rổ", "bóng đá"]
+console.log('them phan tu neu da co thi khong them', addIfNotExist(["bóng chuyền", "bóng rổ", "bóng đá"], ' a'));
+
+// 24. Viết hàm xoá toàn bộ phần tử ra khỏi mảng
+const deleteV = (arr, chuoiCanXoa) => {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == chuoiCanXoa) {
+            arr.splice(i,1)
+        }
+    }
+    return arr
+}
+console.log('xoa all:', deleteV(["bóng chuyền", "bóng rổ", "bóng đá", "bóng chuyền"], 'bóng chuyền'));

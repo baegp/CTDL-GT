@@ -177,36 +177,32 @@ console.log(`cap nhap gia san pham theo ten:`, capNhatGiaTenIPhone5(arr, 'ip14',
 
 // 14. Viết hàm sắp xếp một mảng các đối tượng theo giá tăng dần 
 const sapXepTangDanTheoGia = (mang) => {
-    let temp = []
-    temp = mang
     let tam
-    for (let i = 0; i < temp.length; i++) {
-        for (let j = 0; j < i; j++) {
-            if (temp[i].price < temp[j].price) {
-                tam = temp[i]
-                temp[i] = temp[j]
-                temp[j] = tam
+    for (let i = 0; i < mang.length; i++) {
+        for (let j = i + 1; j < mang.length; j++) {
+            if (mang[i].price > mang[j].price) {
+                tam = mang[i]
+                mang[i] = mang[j]
+                mang[j] = tam
             }
         }
     }
-    return temp
+    return mang
 }
 console.log(`sap xep tang dan theo gia:`, sapXepTangDanTheoGia(arr));
 
 // 15. Viết hàm sắp xếp một mảng các đối tượng theo giá giảm dần 
 const sapXepGiamDanTheoGia = (mang) => {
-    let temp = []
-    temp = mang
     let tam
-    for (let i = 1; i < temp.length; i++) {
-        for (let j = 0; j < i; j++) {
-            if (temp[i].price > temp[j].price) {
-                tam = temp[i]
-                temp[i] = temp[j]
-                temp[j] = tam
+    for (let i = 0; i < mang.length; i++) {
+        for (let j = i + 1; j < mang.length; j++) {
+            if (mang[i].price < mang[j].price) {
+                tam = mang[i]
+                mang[i] = mang[j]
+                mang[j] = tam
             }
         }
     }
-    return temp
+    return mang
 }
 console.log(`sap xep giam dan theo gia:`, sapXepGiamDanTheoGia(arr));
