@@ -142,9 +142,14 @@ console.log('them phan tu neu da co thi khong them', addIfNotExist(["bóng chuy�
 const deleteV = (arr, chuoiCanXoa) => {
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] == chuoiCanXoa) {
-            arr.splice(i,1)
+            arr.splice(i, 1)
         }
     }
     return arr
 }
+
+// 25. Sử dụng hàm (24).
+// - Mảng: ["bóng chuyền", "bóng rổ", "bóng đá","bóng chuyền"]
+// - string cần thêm: bóng chuyền
+// - kết quả trả ra: ["bóng rổ", "bóng đá"]
 console.log('xoa all:', deleteV(["bóng chuyền", "bóng rổ", "bóng đá", "bóng chuyền"], 'bóng chuyền'));
