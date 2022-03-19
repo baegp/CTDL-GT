@@ -6,7 +6,7 @@ const Finbonaci = (n) => {
     for (a; n >= 0; n--) {
         console.log(`finbonaci`, a);
         temp = a;
-        a = a + b; 
+        a = a + b;
         b = temp;
     }
     return b;
